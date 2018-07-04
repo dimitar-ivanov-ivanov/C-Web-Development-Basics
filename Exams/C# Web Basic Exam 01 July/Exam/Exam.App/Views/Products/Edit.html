@@ -1,0 +1,32 @@
+﻿<main class="mt-3">
+    <h1 class="text-center">Edit</h1>
+    <hr class="bg-secondary half-width" />
+    <form class="mx-auto half-width" method="post" action="/products/edit?id={{{id}}}">
+        <div class="text-danger">{{{error}}}</div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="" value="{{{name}}}" name="Name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" placeholder="" value="{{{price}}}" name="Price">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="Description" placeholder="" class="input-xlarge">{{{description}}}</textarea>
+        </div>
+        <div class="form-group">
+            <label class="text-center" for="fullName">Product Type</label>
+            <input type="radio" id="radio" {{{foodChecked}}} name="ProductType" value="Food">Food<br>
+            <input type="radio" id="radio" {{{domesticChecked}}} name="ProductType" value="Domestic">Domestic<br>
+            <input type="radio" id="radio" {{{healthChecked}}} name="ProductType" value="Health">Health<br>
+            <input type="radio" id="radio" {{{cosmeticChecked}}} name="ProductType" value="Cosmetic">Cosmetic<br>
+            <input type="radio" id="radio" {{{otherChecked}}} name="ProductType" value="Other">Other<br>
+        </div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn chushka-bg-color">Edit</button>
+            &nbsp;
+            <button type="submit" class="btn chushka-bg-color"><a href="/">Cancel</a></button>
+        </div>
+    </form>
+</main>
